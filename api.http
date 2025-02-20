@@ -1,0 +1,24 @@
+POST http://localhost:3333/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Arthur123",
+  "email": "arthurssousa22322004@gmail.com",
+  "referrer": "2ce0694d-28f4-4183-8a95-0e5257e5063a"
+}
+
+### 
+GET http://localhost:3333/invites/2ce0694d-28f4-4183-8a95-0e5257e5063a
+
+# para contar os cliques
+### 
+GET http://localhost:3333/subscribers/2ce0694d-28f4-4183-8a95-0e5257e5063a/ranking/clicks
+
+###
+GET http://localhost:3333/subscribers/2ce0694d-28f4-4183-8a95-0e5257e5063a/ranking/count
+
+###
+GET http://localhost:3333/subscribers/2ce0694d-28f4-4183-8a95-0e5257e5063a/ranking/position
+  
+### 
+GET http://localhost:3333/ranking
