@@ -2,9 +2,9 @@ POST http://localhost:3333/subscriptions
 Content-Type: application/json
 
 {
-  "name": "Arthur123",
-  "email": "arthurssousa22322004@gmail.com",
-  "referrer": "2ce0694d-28f4-4183-8a95-0e5257e5063a"
+  "name": "Arthur",
+  "email": "arthurssousa2004@gmail.com",
+  "referrer": ""
 }
 
 ### 
