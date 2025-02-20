@@ -2,23 +2,34 @@ POST http://localhost:3333/subscriptions
 Content-Type: application/json
 
 {
-  "name": "Arthur",
-  "email": "arthurssousa2004@gmail.com",
+  "name": "Seu nome1",
+  "email": "SeuEmail1@gmail.com", 
   "referrer": ""
 }
+// Primeira inscrição deixa vazio o 'referrer'
 
+// A partir da primeira inscrição, você vai receber um subscriberId, coloque ele dentro do "referrer" e no lugar do "subscriberId" nas rotas seguintes e pronto.
+
+# Quantas vezes clicaram no link que você enviou
 ### 
-GET http://localhost:3333/invites/2ce0694d-28f4-4183-8a95-0e5257e5063a
+GET http://localhost:3333/subscribers/subscriberId/ranking/clicks
 
-# para contar os cliques
+
+// Link de envio para seu amigo clicar e se inscrever no evento
 ### 
-GET http://localhost:3333/subscribers/2ce0694d-28f4-4183-8a95-0e5257e5063a/ranking/clicks
+GET http://localhost:3333/invites/subscriberId
 
-###
-GET http://localhost:3333/subscribers/2ce0694d-28f4-4183-8a95-0e5257e5063a/ranking/count
 
+// Quantas pessoas se inscreveram a partir do seu link
 ###
-GET http://localhost:3333/subscribers/2ce0694d-28f4-4183-8a95-0e5257e5063a/ranking/position
+GET http://localhost:3333/subscribers/subscriberId/ranking/count
+
+
+// Qual posição no ranking você está 
+###
+GET http://localhost:3333/subscribers/subscriberId/ranking/position
   
+
+// Mostra o ranking geral
 ### 
 GET http://localhost:3333/ranking
